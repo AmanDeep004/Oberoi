@@ -17,7 +17,8 @@ const Sidebar = ({ handleChange, currentState }) => {
       <div className="brandColorBg logo mb-0 p-15">
         <Link className="mt-3">
           <img
-            src="/assets/img/dasboard-logo_new.png"
+            // src="/assets/img/dasboard-logo_new.png"
+            src="/imgs/oberoiLogoT.png"
             className="w-100"
             alt=""
           />

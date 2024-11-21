@@ -81,9 +81,9 @@ const Login = ({ openForgetPass }) => {
       />
       <div className="logo">
         <img
-          src="/assets/img/dasboard-logo.webp"
+          src="/imgs/oberoiLogo.png"
           className="w-50 otp-img m-auto d-block"
-          alt=""
+          alt="aman"
         />
       </div>
       <div className="kyc-caption-txt pt-3 text-center">

@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
     plugins: [react()],
     server: {
-        port: 5022,
+        port: 5024,
         hmr: {
             overlay: false,
         },
