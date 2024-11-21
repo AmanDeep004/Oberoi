@@ -1,0 +1,24 @@
+$num: 0;
+
+@while $num < 100 {
+  .p-#{$num} {
+    padding: #{$num}px;
+  }
+  .pt-#{$num},
+  .py-#{$num} {
+    padding-top: #{$num}px;
+  }
+  .pb-#{$num},
+  .py-#{$num} {
+    padding-bottom: #{$num}px;
+  }
+  .pl-#{$num},
+  .px-#{$num} {
+    padding-left: #{$num}px;
+  }
+  .pr-#{$num},
+  .px-#{$num} {
+    padding-right: #{$num}px;
+  }
+  $num: $num + 5;
+}

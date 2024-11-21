@@ -1,0 +1,837 @@
+// Default Variables
+@import "variables";
+
+// Each
+@import "each";
+
+// App Variables
+@import "appVariable";
+// fontss
+//@import url('https://fonts.googlseapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url("../fonts/Hellixfont/stylesheet.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+// Custom Css
+
+/*Global Css start here ---*/
+.seat-icon img {
+  width: 19px;
+} 
+
+.form-group.custom-radio-wrapper.seating-area.position-relative label {
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+.custom-radio-wrapper.seating-area .tool-tip img {
+  width: 10px;
+}
+.KYC-section.w-50 {
+  width: 32% !important;
+}
+.form-group.custom-radio-wrapper.seating-area.position-relative label {
+  font-size: 12px;
+  text-align: left;
+}
+.tabBarUI button.active {
+  background: #80008021 !important;
+  color: purple !important;
+}
+
+.tabBarUI button {
+  color: #444;
+  &:hover {
+    color: $brandColor;
+  }
+}
+.scroll-style::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(222, 28, 225, 0.3);
+  background-color: #f5f5f5;
+}
+.scroll-style {
+  overflow-y: auto !important;
+}
+
+.scroll-style::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f5;
+}
+
+.scroll-style::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border: 2px solid #ccc;
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb
+{
+	background-color: $brandColor;
+}
+
+
+.form-check-input:checked {
+  background-color: $brandColor no-repeat;
+  border-color: $brandColor;
+}
+body {
+  font-family: $globalFont;
+}
+.backgroud-img {
+  background: $backgroud-img;
+  background-size: 100%;
+}
+/*Royal Orchid*/
+.royalOrchid .rOiconBtn {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255, 255, 255, 0.5);
+  padding: 8px;
+  border: 0;
+}
+.royalOrchid .rOiconBtn > span.icon {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  line-height: 22px;
+}
+.bottom-icon {
+  bottom: 10p !important;
+  img {
+    width: 15px;
+    height: 15px;
+  }
+}
+.royalOrchid #topMainMenu.active {
+  z-index: 1;
+}
+section.KYC-section:before {
+  position: absolute;
+  left: 0;
+  background: #fff;
+  content: "";
+  width: 14%;
+  height: 100%;
+  z-index: -9;
+}
+
+.KYC-section {
+  border-radius: 0 30px 30px 0;
+}
+.input_stye1 {
+  border-radius: 16px;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+  font-size: 14px;
+  &:focus {
+    border-color: $brandColor;
+    box-shadow: none;
+  }
+  &:placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.KYC-Form {
+  .icons {
+    top: 6px !important;
+    padding-left: 15px !important;
+  }
+}
+.otp-wraper {
+  flex-wrap: wrap;
+}
+
+.otp-wraper .input_stye1 {
+  text-align: center;
+  width: 17%;
+  padding: 7px 8px;
+  font-size: 19px;
+  margin-right: 5px !important;
+}
+.footer-strip {
+  border-radius: 0 0 30px 0;
+  img {
+    width: 20px;
+    margin-right: 10px;
+  }
+}
+img.w-70.otp-img {
+  width: 50px;
+}
+.radio-txt {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 6px 16px;
+  position: relative;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.radio-txt img {
+  position: absolute;
+  right: 10px;
+  top: 38%;
+}
+.inquiring-wraper input[type="radio"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  z-index: 9;
+}
+.inquiring-wraper.mt-2 {
+  flex-wrap: wrap;
+}
+
+.inquiring-wraper .col-md-4 {
+  width: 33%;
+}
+
+.custom-check {
+  &:checked {
+    background: url("../img/icons/check-circle.svg");
+  }
+}
+.inquiring-wraper input[type="radio"]:checked ~ .radio-txt {
+  background: purple;
+  color: #fff;
+}
+
+.inquiring-wraper input[type="radio"]:checked ~ .radio-txt img {
+  filter: invert(1);
+}
+.error-ui {
+  color: $RedColor;
+  font-size: 14px !important;
+  i {
+    display: inline-flex;
+    img {
+      width: 15px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.custom-radio-wrapper .custom-checkbox {
+  padding: 0px;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.custom-radio-wrapper img.mr-10 {
+  margin: 0;
+  opacity: 0;
+}
+
+.custom-radio-wrapper input[type="radio"]:checked ~ .input_stye1 {
+  background: purple;
+  color: #fff;
+}
+
+.custom-radio-wrapper input[type="radio"]:checked ~ .input_stye1 img.mr-10 {
+  opacity: 1;
+}
+
+.custom-radio-wrapper
+  input[type="radio"]:checked
+  ~ .input_stye1
+  .custom-checkbox {
+  border-color: transparent;
+}
+.custom-radio-wrapper.seating-area input[type="radio"]:checked ~ .input_stye1 {
+  border-color: $brandColor;
+  color: #444;
+}
+
+.custom-radio-wrapper.seating-area .tool-tip {
+  position: relative;
+  z-index: 2;
+}
+
+.custom-tooltip {
+  --bs-tooltip-bg: #fff !important;
+  box-shadow: 2px 3px 4px #444;
+  padding: 5px 0;
+  background: #fff !important;
+}
+
+/* Гамбургер иконка */
+.menu-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  right: 30px !important;
+  top: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 8px;
+  border: 0;
+  border-radius: 100px;
+}
+
+.menu-btn .bar {
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn .bar:nth-of-type(2) {
+  top: calc(50% - 9px);
+}
+.menu-btn .bar:nth-of-type(3) {
+  top: calc(50% + 9px);
+}
+.menu-btn.active .bar:nth-of-type(1) {
+  display: none;
+}
+.menu-btn.active .bar:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+.menu-btn.active .bar:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+.header__nav {
+  position: absolute;
+  right: -23px;
+  width: 100px;
+  height: 100%;
+  background: transparent;
+  top: 15%;
+}
+.Modal-Custom-UI .seat-icon img {
+  width: 41px;
+}
+
+.Modal-Custom-UI label.form-check-label.d-block {
+  font-size: 15px !important;
+}
+
+.Modal-Custom-UI .custom-radio-wrapper.seating-area .tool-tip img {
+  width: 18px;
+}
+
+.form-wizard.card {
+  background: #fff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.04588);
+}
+.form-wizard .card-header {
+  padding: 20px;
+}
+.form-wizard .card-header .steps {
+  display: flex;
+  column-count: 3;
+  justify-content: center;
+  align-items: center;
+}
+.form-wizard .card-header .steps .step {
+  width: 100%;
+  text-align: center;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  position: relative;
+}
+.steps .step p {
+  position: absolute;
+  bottom: -45px;
+  left: 0;
+  right: 0;
+  font-size: 14px !important;
+}
+.form-wizard .card-header .steps .step.active ~ .step span{
+  background: #e8cce5;
+  border: transparent;
+
+}
+.form-wizard .card-header .steps .step.active{
+  position: relative;
+  &:after{
+    position: absolute;
+    content: "";
+    background: url(../img/icons/check-circle.svg) no-repeat;
+    width: 16px;
+    height: 21px;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -7px;
+  }
+}
+
+
+.form-wizard .card-header .steps .step span {
+  padding: 1px 6px;
+  border: 1px solid #877cdf;
+  border-radius: 20px;
+  background: $brandColor;
+  box-shadow: none;
+  border:transparent;
+  font-size: 0;
+  color: transparent;
+  position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    top: -9px;
+    z-index: 9;
+}
+.form-wizard .card-header .steps .step.active span {
+  background: purple;
+  color: white;
+  border: none;
+  padding: 2px 7px;
+  color: transparent;
+  &:before {
+    position: absolute;
+    width: 29px;
+    opacity: 0;
+    height: 29px;
+    background-color: transparent;
+    border: 2px solid purple;
+    content: "";
+    border-radius: 100px;
+    left: -4px;
+    top: -3px;
+  }
+}
+.form-wizard .card-body {
+  padding: 16px;
+  min-height: 250px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.form-wizard .card-body .tabs {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.form-wizard.card-body .tabs .tab {
+  display: none;
+}
+.form-wizard .card-body .tabs .tab.active {
+  display: block !important;
+}
+
+.form-wizard .card-footer button:active {
+  outline: none;
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+.composition-tab-ui .comp-header {
+  font-size: 20px;
+  color: #000;
+}
+
+.composition-tab-ui .comp-header p {
+  padding-top: 5px;
+  color: #929292;
+  font-size: 15px;
+}
+
+.composition-tab-ui button:after {
+  transform: rotate(268deg) !important;
+}
+
+.composition-tab-ui button {
+  padding: 10px;
+  &:foucs {
+    box-shadow: none;
+    outline: none;
+    border: none;
+  }
+}
+
+.composition-tab-ui .accordion-item {
+  border-radius: 19px;
+  margin-bottom: 20px;
+}
+
+.composition-tab-ui .accordion-item button {
+  border-radius: 20px !important;
+}
+.composition-tab-ui tr td {
+  border: none !important;
+  padding: 4px 0;
+}
+.light-Bg-radio input[type="radio"]:checked ~ .input_stye1 {
+  background: transparent;
+  color: #000;
+  border-color: $brandColor;
+}
+
+.menu-wrapper .accordion-button:after {
+  content: "+";
+  border: none;
+  font-size: 25px;
+  position: relative;
+  top: revert-layer;
+  width: 20px;
+  height: 20px !important;
+  background: transparent;
+  border: 1px solid #ccc;
+  line-height: 10px;
+  border-radius: 20px;
+  padding: 2px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_outline {
+  background: transparent !important;
+  border-color: $brandColor;
+  border: 1px solid !important;
+  color: #444 !important;
+  &:hover {
+    color: #fff !important;
+  }
+}
+.menu-wrapper {
+  .accordion-button {
+    padding: 10px 0;
+    font-weight: 600;
+    .selected-order {
+      font-weight: normal;
+      color: #535151;
+    }
+    &:focus {
+      border-bottom: 1px solid #ccc;
+      box-shadow: none !important;
+    }
+  }
+  .accordion-button:not(.collapsed) {
+    background: transparent;
+    color: #444;
+  }
+}
+.selected .select-icon {
+  position: absolute;
+  top: 0;
+  right: 9px;
+}
+
+.selected {
+  position: relative;
+}
+.image-slider {
+  position: relative;
+}
+
+.image-slider .owl-nav button {
+  position: absolute;
+  top: 40%;
+  background: #fff !important;
+  z-index: 999;
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+  border-radius: 50px;
+}
+
+.image-slider .owl-nav button span {
+  font-size: 20px;
+  position: relative;
+  top: -2px;
+}
+
+.image-slider .owl-nav button.owl-prev {
+  left: -17px;
+  box-shadow: 2px 1px 3px #ccc;
+}
+
+.image-slider .owl-nav button.owl-next {
+  right: -14px;
+  box-shadow: 2px 1px 3px #ccc;
+}
+.view-details-card-ui{
+  button{
+    &:after{
+      display: none;
+      opacity: 0;
+    }
+  }
+}
+
+
+.form-wizard .card-header .steps .step{
+  position: relative;
+}
+.form-wizard .card-header .steps .step:not(:first-child)::before{
+  content: "";
+  height: 2px;
+  left: -50%;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  background-color: $brandColor;
+}
+.form-wizard .card-header .steps .step.active ~:before {
+  background: #d8d1d1 !important;
+  opacity: 1;
+}
+.custom-price-range-UI {
+  background: #f3f3f3;
+  padding: 20px 20px;
+  border-radius: 9px;
+  z-index: 99;
+  display: none;
+  width: 100%;
+}
+.custom-price-range-UI.show{
+  display: block;
+} 
+.custom-price-range-UI .values {
+  padding: 8px 0;
+  display: flex;
+}
+.custom-price-range-UI .min-label {
+  top: -9px !important;
+}
+
+.custom-price-range-UI .max-value {
+  margin-left: auto;
+}
+
+.range-slider {
+  margin-top: 10px;
+  position: relative;
+}
+
+.slider-track {
+  width: 100%;
+  background: #ccc;
+  height: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-track-filled {
+  width: 100%;
+  background: $brandColor;
+  height: 5px;
+  position: absolute;
+  transform-origin: 0 0;
+}
+
+.min-thumb,
+.max-thumb {
+  width: 15px;
+    height: 16px;
+    background: purple;
+    position: absolute;
+    top: 50%;
+    border: 2px solid #fff;
+    transform: translateY(-50%);
+    z-index: 4;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border-radius: 100px;
+    box-shadow: 2px 1px 3px #ccc;
+}
+
+.min-thumb {
+  left: 0;
+}
+
+.max-thumb {
+  right: 0;
+}
+.decor-txt-wrapper h6 {font-weight: 900;font-size: 19px;}
+@media (min-width:768px) and (max-width:950px){
+
+.Modal-Custom-UI {
+  min-width: 80% !important;
+}
+.siteBtnGreen {
+  font-size: 13px;
+  padding: 5px 13px;
+}
+
+.item-order-wraper h6 {
+  font-size: 12px;
+}
+}
+@media only screen and (max-width: 420px) {
+  .form-wizard .card-footer button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .bottom-icon {
+    bottom: 0 !important;
+  }
+  .inquiring-wraper  .col-md-6 {
+    padding-left: 0;
+}
+
+  .kyc-wrapper {
+    padding: 20px 15px !important;
+  }
+
+  .alert.alert-warning.error-ui.px-80.py-10.rounded-0.mb-0 {
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .footer-strip.bg-light.px-80.py-20 {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  .error-ui i img {
+    width: 10px;
+  }
+
+  .KYC-section.w-50 {
+    width: 55% !important;
+  }
+  .otp-wraper .input_stye1 {
+    margin-bottom: 15px;
+    width: 15%;
+    padding: 0 10px;
+    font-size: 27px;
+  }
+
+  .menu-btn {
+    right: 6px !important;
+  }
+
+  .header__nav {
+    right: 0 !important;
+    width: 51px;
+  }
+  .menu-btn {
+    right: 6px !important;
+    top: 5px !important;
+  }
+
+  .header__nav {
+    right: 0 !important;
+    width: 51px;
+  }
+
+  .bottom-icon div#bottomMsgMenu {
+    display: none;
+  }
+
+  .bottom-icon div#bottomMsgMenu:nth-child(2),
+  .bottom-icon div#bottomMsgMenu:nth-child(3) {
+    display: block;
+  }
+  .position-fixed.bottom-icon.end-0.bottom-0.mb-90.p-4 {
+    padding: 0 !important;
+    right: 10px !important;
+    bottom: 5% !important;
+  }
+  .radio-txt img {
+    right: 3px !important;
+  }
+  #select > li span.select-label:before {
+    display: none !important;
+  }
+  .seat-icon {
+    margin-right: 10px;
+  }
+
+  .seating-area .tool-tip {
+    margin-left: 10px;
+    position: absolute !important;
+    right: 12px;
+    z-index: 1 !important;
+  }
+  #select > li.up span.select-label:after,
+  #select > li span.select-label:after {
+    transform: rotate(359deg) !important;
+  }
+  label.form-check-label {
+    font-size: 12px;
+  }
+  .tab {
+    padding: 0;
+}
+
+.Modal-Custom-UI  .modal-body.px-30 {
+    padding: 0;
+}
+.form-wizard .card-header .steps {
+  padding: 0 !important;
+  margin: 0;
+}
+
+.form-wizard .card-header .steps .step p {
+  font-size: 11px !important;
+}
+.tick-box-txt, .form-check label{
+  font-size: 15px !important;
+}
+.menu-wrapper .col-md-4.pr-0 {
+  padding-right: 10px;
+}
+.view-details-txt-wrapper img {
+  padding: 10px 0 !important;
+}
+.siteBtnGreen {
+  padding: 5px 10px !important;
+  font-size: 12px !important;
+}
+
+
+.Modal-Custom-UI {
+  min-width: 80% !important;
+}
+
+.item-order-wraper {
+  margin-bottom: 20px;
+}
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+  .inquiring-wraper .col-md-4 {
+    width: 49%;
+  }
+  .KYC-section.w-50 {
+    width: 85% !important;
+  }
+}

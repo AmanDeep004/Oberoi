@@ -1,0 +1,250 @@
+/*! 
+ *  Multiple select dropdown with filter jQuery plugin.
+ *  Copyright (C) 2022  Andrew Wagner  github.com/andreww1011
+ *
+ *  This library is free software; you can redistribute it and/or
+ *  modify it under the terms of the GNU Lesser General Public
+ *  License as published by the Free Software Foundation; either
+ *  version 2.1 of the License, or (at your option) any later version.
+ * 
+ *  This library is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ *  Lesser General Public License for more details.
+ * 
+ *  You should have received a copy of the GNU Lesser General Public
+ *  License along with this library; if not, write to the Free Software
+ *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301
+ *  USA
+ */
+ :root {
+    --fms-badge-text-color: white;
+    --fms-badge-color: var(--primary)
+}
+
+.filter-multi-select.dropup, .filter-multi-select.dropdown {
+    position: relative;
+}
+
+.filter-multi-select .dropdown-toggle::after {
+    all: unset;
+}
+
+.filter-multi-select .dropdown-toggle:empty::after {
+    all: unset;
+}
+
+.filter-multi-select > .dropdown-toggle::before {
+    display: inline-block;
+    margin-right: 0.255em;
+    vertical-align: middle;
+    content: "";
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    position: absolute;
+    right: 10px;
+    top: 37%;
+    background: url('../img/icons/arrow-right.svg') no-repeat;
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+    transform: rotate(90deg);
+}
+
+.filter-multi-select > .dropdown-toggle:empty::before {
+    margin-right: 0.255em;
+}
+
+.filter-multi-select > .viewbar {
+    white-space: normal;
+    font-size: 0.875rem;
+    font-weight: 400;
+    height: auto;
+    cursor: pointer;
+    border-radius: 15px;
+    background: #f3f3f3;
+}
+
+.filter-multi-select > .viewbar > .selected-items > .item {
+    margin: .125rem .25rem .125rem 0;
+    padding: 3px 12px;
+    display: inline-flex;
+    height: 2.4em;
+    color: #484545;
+    background-color: var(--fms-badge-color);
+    border-radius: 1.1em;
+    align-items: center;
+    vertical-align: baseline;
+    background: white;
+}
+
+.filter-multi-select > .viewbar > .selected-items > .item > button {
+    background-color: transparent;
+    color: #a99c9c;
+    border: 0;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.filter-multi-select > .viewbar > .selected-items > .item > button:hover {
+    filter: contrast(50%);
+}
+
+.filter-multi-select > .viewbar > .selected-items > .item.disabled {
+    display: inline-flex;
+    padding: 0px .5em 0px .5em;
+    filter: grayscale(80%) brightness(150%);
+}
+
+.filter-multi-select > .viewbar > .selected-items > .item.disabled > button {
+    display: none;
+}
+
+.filter-multi-select > .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    z-index: 1000;
+    display: none;
+    float: left;
+    max-height: 50vh;
+    min-width: 10rem;
+    overflow-y: auto;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 0.875rem;
+    text-align: left;
+    list-style: none;
+    background-color: #FFFFFF;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+
+.filter-multi-select > .dropdown-menu.show {
+    display: block;
+    width: 100%;
+    box-shadow: 3px 3px 2px #cccccc75;
+}
+
+.filter-multi-select > .dropdown-menu > .filter > input {
+    font-size: 0.875rem;
+    display: none;
+}
+
+.filter-multi-select > .dropdown-menu > .filter > button {
+    position: absolute;
+    border: 0;
+    background-color: transparent;
+    font-weight: 900;
+    color: #ccc;
+    right: 2rem;
+    top: 1rem;
+    display: none;
+}
+
+.filter-multi-select > .dropdown-menu > .filter > button:hover {
+    color: #aaa;
+}
+
+.filter-multi-select .dropdown-item {
+    display: flex;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    flex-wrap: wrap;
+}
+
+.filter-multi-select .dropdown-item.disabled, .filter-multi-select .dropdown-item:disabled {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+.filter-multi-select .dropdown-item:hover, .filter-multi-select .dropdown-item:focus  {
+    background-color: inherit;
+}
+
+.filter-multi-select .dropdown-item.active, .filter-multi-select .dropdown-item:active {
+    color: inherit;
+}
+
+.filter-multi-select .dropdown-item .custom-control-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.filter-multi-select .dropdown-item .custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+    display: inline-block;   
+}
+
+.filter-multi-select .dropdown-item .custom-control-label::before {
+    border-radius: 0.25rem;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    position: absolute;
+    top: 0.15625rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    content: "";
+    background-color: #FFFFFF;
+    border: #8a027d solid 1px;
+}
+
+.filter-multi-select .dropdown-item .custom-control-label::after {
+    position: absolute;
+    top: 0.15625rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    background: no-repeat 50% / 50% 50%;
+}
+
+.filter-multi-select .dropdown-item .custom-checkbox:checked ~ .custom-control-label::before,
+.filter-multi-select .dropdown-item .custom-checkbox:indeterminate ~ .custom-control-label::before {
+    border-color: var(--fms-badge-color);
+    background-color: var(--fms-badge-color);
+}
+
+.filter-multi-select .dropdown-item .custom-checkbox:checked:disabled ~ .custom-control-label::before,
+.filter-multi-select .dropdown-item .custom-checkbox:indeterminate:disabled ~ .custom-control-label::before {
+    border-color: var(--fms-badge-color);
+    background-color: var(--fms-badge-color);
+    filter: grayscale(80%) brightness(150%);
+}
+
+.filter-multi-select .dropdown-item .custom-checkbox:checked ~ .custom-control-label::after {
+    background-image: url("../img/icons/check.svg");
+}
+
+.filter-multi-select .dropdown-item .custom-checkbox:indeterminate ~ .custom-control-label::after {
+    background-image: url("../img/icons/check.svg");
+}
+.viewbar.form-control.dropdown-toggle span.placeholder {
+    opacity: 0;
+}
+
+.filter-multi-select .dropdown-item .dropdown-item.custom-control {
+    width: 50%;
+    padding-bottom: 13px;
+}
+
+.filter-multi-select .dropdown-item .dropdown-item.custom-control:first-child {
+    display: none;
+}
+

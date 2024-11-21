@@ -1,0 +1,19 @@
+// Fonts
+$fontWeights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+// Position
+$positions: static, relative, absolute, fixed, sticky !default;
+// Vertical Align
+$valigns: baseline, top, middle, bottom;
+// Display
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex,
+  inline-flex;
+// Float
+$floats: left, right, none;
+// TEXT
+$textAlign: justify, left, right, center;
+$textTransform: lowercase, uppercase, capitalize;
+// OverFLow
+$overflows: auto, hidden !default;
+
+
+

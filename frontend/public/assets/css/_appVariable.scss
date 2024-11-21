@@ -1,0 +1,57 @@
+$bgLight: #E7E7E7;
+$bgLightBorder: #E7E7E7;
+$brandColor:#8A027D;
+$brandColorGradiend: linear-gradient(270deg, #8A027D 15.08%, #EB00D4 100%) !important;
+$RedColor:#E42802;
+
+$globalFont:roboto;
+$oswaldFont:Oswald;
+$Black:#000000;
+$black1:#222222;
+$lightBlack:#333333;
+$white:#fff;
+$lightText:#999999;
+$backgroud-img: url('../img/bg.png');
+
+// site color 
+.lightText{
+    color:$lightText;
+}
+.brandColorTxt{
+    color:$brandColor;
+}
+.brandColorBg{
+    background:$brandColor !important;
+}
+.black1Bg{
+    background: $black1 !important;
+}
+// site Button
+.siteBtnGreen{
+    background: $brandColorGradiend;
+    display: inline-block;
+    border-radius:15px;
+    transition:all 0.3s ease-in-out 0.2s;
+    &:hover,&:active, &:focus{
+        background-color: $brandColor !important;
+        border-radius:5px !important;
+        transition:all 0.3s ease-in-out 0.2s;
+    }
+  }
+
+  .siteBtnBlack{
+    background: $Black;
+    display: inline-block;
+    padding: 12px 30px !important;
+    border-radius:15px;
+    border:1px solid $bgLight;
+    text-decoration: none;
+    transition:all 0.3s ease-in-out 0.2s;
+    &:hover,&:active, &:focus{
+        background: $brandColor;
+        border-color: $brandColor;
+        border-radius:25px;
+        transition:all 0.3s ease-in-out 0.2s;
+    }
+  }
+

@@ -1,0 +1,10 @@
+{
+    "apps": [
+        {
+            "name": "roHotels.vosmos.live",
+            "script": "npm",
+            "interpreter": "none",
+            "args": "run dev"
+        }
+    ]
+}

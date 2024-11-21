@@ -1,0 +1,33 @@
+$num: 0;
+
+@while $num < 51 {
+  .m-#{$num} {
+    margin: #{$num}px;
+  }
+  .mt-#{$num},
+  .my-#{$num} {
+    margin-top: #{$num}px;
+  }
+  .mb-#{$num},
+  .my-#{$num} {
+    margin-bottom: #{$num}px;
+  }
+  .ml-#{$num},
+  .mx-#{$num} {
+    margin-left: #{$num}px;
+  }
+  .mr-#{$num},
+  .mx-#{$num} {
+    margin-right: #{$num}px;
+  }
+  $num: $num + 5;
+}
+.m-auto {
+  margin: 0 auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
