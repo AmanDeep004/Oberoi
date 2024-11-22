@@ -86,11 +86,10 @@ const Top = () => {
                       onChange={handleDateChange}
                       className="position-absolute top-100 start-0 translate-middle-x purple-datepicker"
                       style={{
-                        border: "1px solid black",
-                        // backgroundColor: "purple",
+                        border: "1px solid #d3b74f", // Updated border color
                       }}
-                      color="purple"
-                      rangeColors="purple"
+                      color="#d3b74f" // Updated color for DateRangePicker
+                      rangeColors={["#d3b74f"]} // Updated range selection color
                       dateColor="white"
                     />
                   </div>

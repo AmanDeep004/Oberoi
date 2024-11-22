@@ -13,7 +13,8 @@ const Hotel = () => {
     <div className="royalOrchid overflow-hidden">
       <iframe
         ref={iframeRef}
-        src="/output/Udaipur/index.htm"
+        // src="/output/Udaipur/index.htm"
+        src="/output/NewDelhi/index.htm"
         // src={data.data.urlName}
         className="myFrame"
         id="iFrame"

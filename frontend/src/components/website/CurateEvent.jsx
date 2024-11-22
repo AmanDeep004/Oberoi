@@ -4032,7 +4032,7 @@ const CurateEvent = ({
                                             <span className="d-block fs-13 text-light-emphasis">
                                               Choosing this means, you will not
                                               need any decoration support from
-                                              Sterling Hotel
+                                              The Oberoi
                                             </span>
                                           </label>
                                         </div>
@@ -4351,7 +4351,7 @@ const CurateEvent = ({
                                             <span className="d-block fs-13 text-light-emphasis">
                                               Choosing this means, you will not
                                               need any entertainment support
-                                              from Sterling Hotel
+                                              from The Oberoi
                                             </span>
                                           </label>
                                           <div className="position-relative bottom-0 end-0 py-3 text-danger font-weight-bold">

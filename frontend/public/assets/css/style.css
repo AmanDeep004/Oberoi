@@ -1399,11 +1399,12 @@
 }
 
 .brandColorTxt {
-    color: #8a027d;
+    color: #d3b74f
 }
 
 .brandColorBg {
-    background: #8a027d !important;
+    /* background: #d3b74f !important; */
+    background: #262B6B;
 }
 
 .black1Bg {
@@ -1413,8 +1414,8 @@
 .siteBtnGreen {
     background: linear-gradient(
         270deg,
-        #8a027d 15.08%,
-        #eb00d4 100%
+        #d3b74f 15.08%,
+     #eccf67 100%
     ) !important;
     display: inline-block;
     border-radius: 15px;
@@ -1424,7 +1425,7 @@
 .siteBtnGreen:hover,
 .siteBtnGreen:active,
 .siteBtnGreen:focus {
-    background-color: #8a027d !important;
+    background-color: #d3b74f !important;
     border-radius: 5px !important;
     transition: all 0.3s ease-in-out 0.2s;
 }
@@ -1442,8 +1443,8 @@
 .siteBtnBlack:hover,
 .siteBtnBlack:active,
 .siteBtnBlack:focus {
-    background: #8a027d;
-    border-color: #8a027d;
+    background: #d3b74f;
+    border-color: #d3b74f;
     border-radius: 25px;
     transition: all 0.3s ease-in-out 0.2s;
 }
@@ -1465,19 +1466,19 @@
 
 .lightbtnBg:hover {
     transition: all 0.3s ease-in-out 0.2s;
-    background: #8a027d !important;
-    border-color: #8a027d;
-    color: #fff;
+    background: #d3b74f !important;
+    border-color: #d3b74f;
+    color: #ffff;
 }
 
 .siteBtnOutline {
     background: transparent !important;
-    color: #8a027d !important;
-    border: 1px solid #8a027d !important;
+    color: #d3b74f !important;
+    border: 1px solid #d3b74f !important;
 }
 
 .siteBtnOutline:hover {
-    color: #fff !important;
+    color: #ffff !important;
 }
 
 .DBLightBg {
@@ -1521,7 +1522,7 @@
 }
 
 .tabBarUI button:hover {
-    color: #8a027d;
+    color: #d3b74f;
 }
 
 .scroll-style::-webkit-scrollbar-track {
@@ -1558,7 +1559,7 @@
 .thin-scroll::-webkit-scrollbar-thumb {
     border-radius: 5px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #8a027d;
+    background-color: #d3b74f;
 }
 
 .modal-dialog-scrollable .modal-body::-webkit-scrollbar-track {
@@ -1572,12 +1573,12 @@
 }
 
 .modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb {
-    background-color: #8a027d;
+    background-color: #d3b74f;
 }
 
 .form-check-input:checked {
-    background-color: #8a027d no-repeat;
-    border-color: #8a027d;
+    background-color: #d3b74f no-repeat;
+    border-color: #d3b74f;
 }
 
 body {
@@ -1603,7 +1604,7 @@ body {
 }
 
 .royalOrchid .rOiconBtn > span.icon {
-    background-color: #fff;
+    background-color: #ffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1630,7 +1631,7 @@ body {
 section.KYC-section:before {
     position: absolute;
     left: 0;
-    background: #fff;
+    background: #ffff;
     content: "";
     width: 14%;
     height: 100%;
@@ -1649,7 +1650,7 @@ section.KYC-section:before {
 }
 
 .input_stye1:focus {
-    border-color: #8a027d;
+    border-color: #d3b74f;
     box-shadow: none;
 }
 
@@ -1658,7 +1659,7 @@ section.KYC-section:before {
     border: 1px solid  !important;
     background-color: #f3f3f3  !important;
     font-size: 14px  !important;
-    border-color: #8A027D  !important;
+    border-color: #d3b74f  !important;
     box-shadow: none  !important;
   }
 
@@ -1735,7 +1736,7 @@ img.w-70.otp-img {
 
 .inquiring-wraper input[type="radio"]:checked ~ .radio-txt {
     background: purple;
-    color: #fff;
+    color: #ffff;
 }
 
 .inquiring-wraper input[type="radio"]:checked ~ .radio-txt img {
@@ -1775,7 +1776,7 @@ img.w-70.otp-img {
 
 .custom-radio-wrapper input[type="radio"]:checked ~ .input_stye1 {
     background: purple !important;
-    color: #fff !important;
+    color: #ffff !important;
 }
 
 .custom-radio-wrapper input[type="radio"]:checked ~ .input_stye1 img.mr-10 {
@@ -1790,7 +1791,7 @@ img.w-70.otp-img {
 }
 
 .custom-radio-wrapper.seating-area input[type="radio"]:checked ~ .input_stye1 {
-    border-color: #8a027d !important;
+    border-color: #d3b74f !important;
     color: #444 !important;
     background: transparent !important;
 }
@@ -1801,10 +1802,10 @@ img.w-70.otp-img {
 }
 
 .custom-tooltip {
-    --bs-tooltip-bg: #fff !important;
+    --bs-tooltip-bg: #ffff !important;
     box-shadow: 2px 3px 4px #444;
     padding: 5px 0;
-    background: #fff !important;
+    background: #ffff !important;
 }
 
 /* Гамбургер иконка */
@@ -1832,7 +1833,7 @@ img.w-70.otp-img {
     left: 50%;
     border-radius: 4px;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #ffff;
     transition: all 0.3s ease-in-out;
 }
 
@@ -1880,7 +1881,7 @@ img.w-70.otp-img {
 }
 
 .form-wizard.card {
-    background: #fff;
+    background: #ffff;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.04588);
 }
 
@@ -1938,7 +1939,7 @@ img.w-70.otp-img {
     padding: 1px 6px;
     border: 1px solid #877cdf;
     border-radius: 20px;
-    background: #8a027d;
+    background: #d3b74f;
     box-shadow: none;
     border: transparent;
     font-size: 0;
@@ -2047,7 +2048,7 @@ img.w-70.otp-img {
 .light-Bg-radio input[type="radio"]:checked ~ .input_stye1 {
     background: transparent !important;
     color: #000 !important;
-    border-color: #8a027d !important;
+    border-color: #d3b74f !important;
 }
 
 .menu-wrapper .accordion-button:after {
@@ -2071,13 +2072,13 @@ img.w-70.otp-img {
 
 .btn_outline {
     background: transparent !important;
-    border-color: #8a027d;
+    border-color: #d3b74f;
     border: 1px solid !important;
     color: #444 !important;
 }
 
 .btn_outline:hover {
-    color: #fff !important;
+    color: #ffff !important;
 }
 
 .menu-wrapper .accordion-button {
@@ -2117,7 +2118,7 @@ img.w-70.otp-img {
 .image-slider .owl-nav button {
     position: absolute;
     top: 40%;
-    background: #fff !important;
+    background: #ffff !important;
     z-index: 999;
     width: 30px;
     height: 30px;
@@ -2152,7 +2153,7 @@ img.w-70.otp-img {
 
 /* for owlCrousal */
 .owl-theme .owl-nav [class*='owl-'] {
-    color: #FFF !important;
+    color: #ffff !important;
     font-size: 14px;
     margin: 5px;
     padding: 4px 7px;
@@ -2196,7 +2197,7 @@ img.w-70.otp-img {
     position: absolute;
     top: 0px;
     width: 100%;
-    background-color: #8a027d;
+    background-color: #d3b74f;
 }
 
 .form-wizard .card-header .steps .step.active ~ :before {
@@ -2245,7 +2246,7 @@ img.w-70.otp-img {
 
 .slider-track-filled {
     width: 100%;
-    background: #8a027d;
+    background: #d3b74f;
     height: 5px;
     position: absolute;
     transform-origin: 0 0;
@@ -2258,7 +2259,7 @@ img.w-70.otp-img {
     background: purple;
     position: absolute;
     top: 50%;
-    border: 2px solid #fff;
+    border: 2px solid #ffff;
     transform: translateY(-50%);
     z-index: 4;
     -webkit-user-select: none;
@@ -2297,7 +2298,7 @@ img.w-70.otp-img {
 
 @keyframes mymove1 {
     50% {
-        box-shadow: -1px 0px 17px 7px #8a027d;
+        box-shadow: -1px 0px 17px 7px #d3b74f;
     }
 }
 
@@ -2322,7 +2323,8 @@ li.active-parent a {
 }
 
 li.active-page {
-    background: purple;
+    /* background: #d3b74f; */
+   background: #262B6B;
     padding-left: 16px;
 }
 
@@ -2331,12 +2333,13 @@ li.active-page + li a {
 }
 
 .left-sidebar-navbar-ui ul li a {
-    color: #fff;
+    color: #ffff;
     text-decoration: none;
     text-align: center;
     display: block;
     padding: 13px;
-    background: #8a027d;
+    /* background: #d3b74f; */
+    background: #262B6B;
     font-size: 13px;
 }
 
@@ -2361,7 +2364,7 @@ u.top-nav-ui {
     padding: 0 10px;
     text-decoration: none !important;
     display: block;
-    color: #8a027d;
+    color: #d3b74f;
 }
 
 .notification-box li {
@@ -2420,8 +2423,8 @@ aside.left-nav-sidebar.brandColorBg.p-1 {
 }
 
 .pagination-ui ul li a.current-page {
-    border: 1px solid #8a027d;
-    color: #8a027d;
+    border: 1px solid #d3b74f;
+    color: #d3b74f;
 }
 
 .upload-ui {
@@ -2470,9 +2473,9 @@ aside.left-nav-sidebar.brandColorBg.p-1 {
 }
 
 .tablist-UI ul#pills-tab li button.active {
-    color: #fff !important;
-    border-color: #8a027d !important;
-    background: #8a027d;
+    color: #ffff !important;
+    border-color: #d3b74f !important;
+    background: #d3b74f;
     padding: 10px 29px;
 }
 
@@ -2487,8 +2490,8 @@ aside.left-nav-sidebar.brandColorBg.p-1 {
     /* initially hide the sidebar to the right */
     width: 250px;
     height: 100%;
-    background-color: #fff;
-    color: #fff;
+    background-color: #ffff;
+    color: #ffff;
     padding: 0px;
     z-index: 9999;
 }
@@ -2566,7 +2569,7 @@ body.DBLightBg.overlay:after {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    border: 1px dashed #8a027d;
+    border: 1px dashed #d3b74f;
     background: rgba(138, 2, 125, 0.05);
 }
 
@@ -2626,7 +2629,7 @@ li.active-page a {
 
 span.tooltipUI {
     background: rgba(219, 2, 198, 0.67);
-    color: #fff;
+    color: #ffff;
     padding: 5px 11px;
     display: block;
     width: 109px;
@@ -2934,7 +2937,7 @@ span.tooltipUI:after {
 
     .user-pc a {
         background: transparent !important;
-        color: #fff !important;
+        color: #ffff !important;
     }
 
     .left-nav-sidebar {

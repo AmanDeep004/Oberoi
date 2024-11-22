@@ -126,7 +126,7 @@ const Reports = () => {
             <div className="text-end col-md-6" ref={wrapperRef}>
               <div className="d-flex align-items-center justify-content-end flex-column flex-md-row">
                 <div className="me-md-3 mb-3 mb-md-0 position-relative">
-                  <div className="d-flex align-items-center">
+                  {/* <div className="d-flex align-items-center">
                     <label
                       htmlFor="dateRange"
                       className="bold-font text-start mb-0 me-2"
@@ -158,6 +158,45 @@ const Reports = () => {
                             }}
                             color="purple"
                             rangeColors="purple"
+                            dateColor="white"
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </div> */}
+                  <div className="d-flex align-items-center">
+                    <label
+                      htmlFor="dateRange"
+                      className="bold-font text-start mb-0 me-2"
+                      style={{ minWidth: "100px" }} // Optional for consistent spacing
+                    >
+                      Date Range
+                    </label>
+                    <div
+                      className={`position-relative gold-date-range ${
+                        isDateRangeOpen ? "border" : ""
+                      }`}
+                      style={{ zIndex: 9999 }}
+                    >
+                      <div
+                        onClick={() => setIsDateRangeOpen(!isDateRangeOpen)}
+                        className="input_stye1 p-2 date-range-toggle"
+                        // style={{ color: "#d3b74f" }} // Updated toggle text color
+                      >
+                        {formatDate(dateRange[0].startDate.toISOString())} -{" "}
+                        {formatDate(dateRange[0].endDate.toISOString())}
+                      </div>
+                      {isDateRangeOpen && (
+                        <div className="date-range-picker-container">
+                          <DateRangePicker
+                            ranges={dateRange}
+                            onChange={handleDateChange}
+                            className="position-absolute top-100 start-0 translate-middle-x gold-datepicker"
+                            style={{
+                              border: "1px solid #d3b74f", // Updated border color
+                            }}
+                            color="#d3b74f" // Updated color for DateRangePicker
+                            rangeColors={["#d3b74f"]} // Updated range selection color
                             dateColor="white"
                           />
                         </div>

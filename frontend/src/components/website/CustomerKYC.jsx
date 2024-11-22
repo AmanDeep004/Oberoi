@@ -165,7 +165,7 @@ const CustomerKYC = ({ onSuccess, onNext, onError, hotelId }) => {
                         <div className="kyc-caption-txt pt-0">
                           <h1 className="fs-30">
                             Welcome to
-                            <strong className="d-block">Sterling Hotel</strong>
+                            <strong className="d-block">The Oberoi</strong>
                           </h1>
                           <p>Please Insert Your Details and Continue</p>
                         </div>
@@ -186,7 +186,7 @@ const CustomerKYC = ({ onSuccess, onNext, onError, hotelId }) => {
                               /* and other goodies */
                             }) => (
                               <Form>
-                                <div className="form-group mb-2 position-relative">
+                                <div className="form-group mb-3 position-relative">
                                   <Field
                                     type="text"
                                     className="form-control input_stye1 p-15 px-45"
@@ -205,7 +205,7 @@ const CustomerKYC = ({ onSuccess, onNext, onError, hotelId }) => {
                                     />
                                   </div>
                                 </div>
-                                <div className="form-group mb-2 position-relative">
+                                <div className="form-group mb-3 position-relative">
                                   <Field
                                     type="text"
                                     className="form-control input_stye1 p-15 px-45"
@@ -224,7 +224,7 @@ const CustomerKYC = ({ onSuccess, onNext, onError, hotelId }) => {
                                     />
                                   </div>
                                 </div>
-                                <div className="form-group mb-2 position-relative">
+                                <div className="form-group mb-3 position-relative">
                                   <Field
                                     type="phone"
                                     className="form-control input_stye1 p-15 px-45"
@@ -243,7 +243,7 @@ const CustomerKYC = ({ onSuccess, onNext, onError, hotelId }) => {
                                     />
                                   </div>
                                 </div>
-                                <div className="form-group mb-2 position-relative">
+                                <div className="form-group mb-3 position-relative">
                                   <div className="form-check">
                                     <input
                                       className="form-check-input"
@@ -255,7 +255,7 @@ const CustomerKYC = ({ onSuccess, onNext, onError, hotelId }) => {
                                       className="form-check-label fs-14"
                                       htmlFor="flexCheckDefault"
                                     >
-                                      {`By proceeding, you agree to Sterling Hotel `}
+                                      {`By proceeding, you agree to The Oberoi `}
                                       <a
                                         href="https://www.sterlingholidays.com/privacy-policy"
                                         className="text-decoration-none brandColorTxt"
@@ -274,7 +274,7 @@ const CustomerKYC = ({ onSuccess, onNext, onError, hotelId }) => {
                                     </label>
                                   </div>
                                 </div>
-                                <div className="form-group mb-1 text-center">
+                                <div className="form-group mb-2 text-center">
                                   <input
                                     type="submit"
                                     className="siteBtnGreen fw-700 text-white border-0 px-60 py-15 rounded-5 text-uppercase brandColorGradiend"
@@ -283,12 +283,8 @@ const CustomerKYC = ({ onSuccess, onNext, onError, hotelId }) => {
                                     // }}
                                   />
                                 </div>
-                                {/* <div>
-                                  <h6>Or</h6>
-                                  <a>Continue as a guest user</a>
-                                </div> */}
 
-                                <div className="or-separator text-center">
+                                {/* <div className="or-separator text-center">
                                   <h6>Or</h6>
                                 </div>
 
@@ -299,7 +295,7 @@ const CustomerKYC = ({ onSuccess, onNext, onError, hotelId }) => {
                                   >
                                     Continue as a guest user
                                   </Link>
-                                </div>
+                                </div> */}
                               </Form>
                             )}
                           </Formik>

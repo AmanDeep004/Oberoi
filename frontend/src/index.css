@@ -41,13 +41,15 @@ body {
 }
 
 .react-datepicker__day--selected {
-  background: purple;
+  /* background: purple; */
+  background: #d3b74f;
   border-radius: 50px;
   color: white;
 }
 
 .react-datepicker__day--selected:hover {
-  background: rgb(215, 129, 215);
+  /* background: rgb(215, 129, 215); */
+    background: #d8c068;
   border-radius: 50px;
   color: white;
 }
