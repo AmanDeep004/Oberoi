@@ -496,6 +496,7 @@ const UIManager = ({ hotelData, iframeRef }) => {
                   onClick={() => changeStatus("contact")}
                 >
                   <span className="icon menu">
+                    {/* <img src="/assets/img/icons/envelope_gold.png" alt="" /> */}
                     <img src="/assets/img/icons/envelope.png" alt="" />
                   </span>
                   <span className="tooltipUI fs-12">Contact</span>

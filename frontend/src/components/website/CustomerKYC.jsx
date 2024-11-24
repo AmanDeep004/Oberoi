@@ -418,6 +418,7 @@ const CustomerKYC = ({ onSuccess, onNext, onError, hotelId }) => {
                   <div className="footer-strip bg-light px-30 py-20">
                     <p className="mb-0 fs-13">
                       <i>
+                        {/* <img src="/assets/img/icons/head_gold.png" alt="" /> */}
                         <img src="/assets/img/icons/head.png" alt="" />
                       </i>
                       {` Need Assistance? Feel Free to `}

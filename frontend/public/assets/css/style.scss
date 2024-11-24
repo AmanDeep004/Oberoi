@@ -35,7 +35,8 @@
 }
 .tabBarUI button.active {
   background: #80008021 !important;
-  color: purple !important;
+  // color: purple !important;
+  color: #d3b74f !important;
 }
 
 .tabBarUI button {
@@ -209,7 +210,8 @@ img.w-70.otp-img {
   }
 }
 .inquiring-wraper input[type="radio"]:checked ~ .radio-txt {
-  background: purple;
+  // background: purple;
+  background:  #d3b74f ;
   color: #fff;
 }
 
@@ -246,7 +248,8 @@ img.w-70.otp-img {
 }
 
 .custom-radio-wrapper input[type="radio"]:checked ~ .input_stye1 {
-  background: purple;
+  // background: purple;
+  background: #d3b74f;
   color: #fff;
 }
 
@@ -412,7 +415,8 @@ img.w-70.otp-img {
     z-index: 9;
 }
 .form-wizard .card-header .steps .step.active span {
-  background: purple;
+  // background: purple;
+  background: #d3b74f;
   color: white;
   border: none;
   padding: 2px 7px;
@@ -423,7 +427,7 @@ img.w-70.otp-img {
     opacity: 0;
     height: 29px;
     background-color: transparent;
-    border: 2px solid purple;
+    border: 2px solid #d3b74f;
     content: "";
     border-radius: 100px;
     left: -4px;
@@ -657,7 +661,9 @@ img.w-70.otp-img {
 .max-thumb {
   width: 15px;
     height: 16px;
-    background: purple;
+
+    background:#d3b74f;
+    
     position: absolute;
     top: 50%;
     border: 2px solid #fff;

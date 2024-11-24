@@ -25,7 +25,7 @@ const Sidebar = ({ handleChange, currentState }) => {
         </Link>
       </div>
       <div className="left-sidebar-navbar-ui">
-        <ul className="pl-5">
+        <ul className="pl-5" style={{ color: "#d3b74f" }}>
           <li className={currentState == "Dashboard" ? "active-parent" : ""}>
             <Link></Link>
           </li>
