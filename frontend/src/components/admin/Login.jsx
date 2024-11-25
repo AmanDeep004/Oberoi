@@ -81,7 +81,8 @@ const Login = ({ openForgetPass }) => {
       />
       <div className="logo">
         <img
-          src="/imgs/oberoiLogo.png"
+          // src="/imgs/oberoiLogo.png"
+          src="/imgs/oberoi_logo.png"
           className="w-50 otp-img m-auto d-block"
           alt="aman"
         />
