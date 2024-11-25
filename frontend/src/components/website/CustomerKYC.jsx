@@ -257,7 +257,7 @@ const CustomerKYC = ({ onSuccess, onNext, onError, hotelId }) => {
                                     >
                                       {`By proceeding, you agree to The Oberoi `}
                                       <a
-                                        href="https://www.sterlingholidays.com/privacy-policy"
+                                        href="https://www.oberoihotels.com/privacy-policy/"
                                         className="text-decoration-none brandColorTxt"
                                         target="_blank"
                                       >
@@ -265,7 +265,7 @@ const CustomerKYC = ({ onSuccess, onNext, onError, hotelId }) => {
                                       </a>
                                       &nbsp;and &nbsp;
                                       <a
-                                        href="https://www.sterlingholidays.com/member-offer-tc"
+                                        href="https://www.oberoihotels.com/hotels-in-delhi/policies/"
                                         className="text-decoration-none brandColorTxt"
                                         target="_blank"
                                       >
@@ -419,11 +419,12 @@ const CustomerKYC = ({ onSuccess, onNext, onError, hotelId }) => {
                     <p className="mb-0 fs-13">
                       <i>
                         {/* <img src="/assets/img/icons/head_gold.png" alt="" /> */}
-                        <img src="/assets/img/icons/head.png" alt="" />
+                        <img src="/assets/img/icons/head_gold.png" alt="" />
                       </i>
                       {` Need Assistance? Feel Free to `}
                       <a
-                        href="mailto:crs@sterlingholidays.com"
+                        // href="mailto:crs@sterlingholidays.com"
+                        href="https://www.oberoihotels.com/hotels-in-delhi/contact-us/"
                         className="text-decoration-none brandColorTxt"
                       >
                         Contact Us
