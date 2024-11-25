@@ -18,7 +18,7 @@ const Sidebar = ({ handleChange, currentState }) => {
         <Link className="mt-3">
           <img
             // src="/assets/img/dasboard-logo_new.png"
-            src="/imgs/oberoiLogoT.png"
+            src="/imgs/oberoi_logo.png"
             className="w-100"
             alt=""
           />
