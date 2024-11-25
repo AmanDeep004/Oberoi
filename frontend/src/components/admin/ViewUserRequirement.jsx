@@ -195,12 +195,12 @@ const ViewUserRequirement = ({ data, onClose }) => {
                                       <p>
                                         {data?.programs.length > 0
                                           ? data?.programs?.reduce(
-                                            (sum, a) =>
-                                              sum +
-                                              `${sum != "" ? ", " : ""}` +
-                                              a?.value,
-                                            ""
-                                          )
+                                              (sum, a) =>
+                                                sum +
+                                                `${sum != "" ? ", " : ""}` +
+                                                a?.value,
+                                              ""
+                                            )
                                           : " Not Specified"}
                                       </p>
                                     </div>
@@ -257,7 +257,8 @@ const ViewUserRequirement = ({ data, onClose }) => {
                                         </span>
                                       </p>
                                       <p>
-                                        {data?.isAssociateProgramFood == true ? "Yes"
+                                        {data?.isAssociateProgramFood == true
+                                          ? "Yes"
                                           : "No"}
                                       </p>
                                     </div>
