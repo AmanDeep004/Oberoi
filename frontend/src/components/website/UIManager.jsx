@@ -541,9 +541,11 @@ const UIManager = ({ hotelData, iframeRef }) => {
               setState("inquiry");
               getNav();
             }}
+            // here
             onNext={(user) => {
               setUser(user);
-              setState("none");
+              // setState("none");
+              setState("inquiry");
             }}
             hotelId={hotelData._id}
           />

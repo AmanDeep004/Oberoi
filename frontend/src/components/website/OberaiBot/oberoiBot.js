@@ -381,7 +381,7 @@ window.onload = async function () {
     if (!response.ok) throw new Error("Failed to fetch IP location data.");
 
     const data = await response.json();
-    const { ip, city, region, country_name } = data;
+    const { city, country_name } = data;
 
     // console.log("User ID:", userIDCl);
     // console.log("IP Address:", ip);
@@ -461,8 +461,8 @@ function sendMessageq(value) {
     myElement.scrollTop = myElement.scrollHeight;
     let userIDCl = localStorage.getItem("userId");
     let tokenCL = localStorage.getItem("tokenCL");
-    let cityCl = localStorage.getItem("userId");
-    let countryCl = localStorage.getItem("userId");
+    let cityCl = localStorage.getItem("city");
+    let countryCl = localStorage.getItem("country");
 
     if (!tokenCL) {
       tokenCL = ""; // Set token to empty initially
@@ -667,9 +667,20 @@ function sendMessageqButtonQuery11(value) {
   }
 }
 
+// window.addEventListener('beforeunload', function () {
+//   localStorage.clear();
+// });
+
 window.addEventListener('beforeunload', function () {
-  localStorage.clear();
+  const keysToClear = ['tokenCL', 'userId', 'widgetOpened', 'city', 'country'];
+
+  keysToClear.forEach((key) => {
+    localStorage.removeItem(key);
+  });
+
+  console.log('Selected keys cleared from localStorage.');
 });
+
 
 function OptionCliked(value, clientId) {
   sendMessageq(value, clientId);
