@@ -117,6 +117,7 @@ export default class ElasticBot {
     } else {
       cls = `chatBotGPT`;
     }
+    // here
     VosmosGPT =
       `
       <div class="top-0  bottom-0 vh-100" style="width:400px">
@@ -126,7 +127,7 @@ export default class ElasticBot {
               <div class="chatBotHeader  p-3">
                   <div class="d-flex">
                            <div class="chatUser me-2 mt-1 rounded-circle bg-white align-items-center">
-            <img src="./oberoi.png" alt="User Name">
+            <img  src="/imgs/oberoiLogo.png" alt="Users Name">
           </div>
           <div class="chatWith text-white w-100 lh-1 mt-1">
             <div class="fs-5 chatBotName text-truncate mt-1 mb-0 font-weight-bold">Athithi</div>
