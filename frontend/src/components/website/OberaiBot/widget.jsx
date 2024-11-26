@@ -7,7 +7,8 @@ const ChatMessageWidget = () => {
       position: "bottom-right",
       clientId: "804493",
       eventId: "",
-      isExpand: true,
+      // isExpand: true,
+      isExpand: false,
       onRefresh: (params) => {
         console.log("parameter", params);
       },
