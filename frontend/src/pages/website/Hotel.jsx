@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Loader from "../../components/Loader";
 import UIManager from "../../components/website/UIManager";
 import { useRef } from "react";
+import ChatMessageWidget from "../../components/website/OberaiBot/widget";
 
 const Hotel = () => {
   const { hotelId } = useParams();
@@ -20,6 +21,7 @@ const Hotel = () => {
         id="iFrame"
       />
       <UIManager hotelData={data.data} iframeRef={iframeRef} />
+      <ChatMessageWidget />
     </div>
   ) : (
     <></>
