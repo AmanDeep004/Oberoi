@@ -138,7 +138,7 @@ export const styles = `
         // ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
-    background: #c36512;
+    background: #d3b74f;
       }
       .chatBotHeader::before {
         content: "";
@@ -235,7 +235,7 @@ export const styles = `
       .chatBtnSubmit {
         right: -20px;
   top: 12px;
-  background: #c36512;
+  background: #d3b74f;
   width: 32px;
   height: 32px;
   color: #fff;
@@ -264,7 +264,7 @@ export const styles = `
                 position: fixed;
     height: 48px;
     width: 48px;
-    background: #c36512;
+    background: #d3b74f;
     bottom: 10px;
     right: 10px;
     border-radius: 40px;
@@ -278,7 +278,7 @@ export const styles = `
       }
       //.chatBtnSubmit1:hover,
       // .chatBtnSubmit1:focus {
-      //   background:#c36512;
+      //   background:#d3b74f;
       //   color: #fff;
       //   box-shadow: inset 0px 0px 20px #444;
       // }
@@ -312,7 +312,7 @@ export const styles = `
       }
       .chatBtnSubmit:hover,
       .chatBtnSubmit:focus {
-        background: #c36512;
+        background: #d3b74f;
         color: #fff;
         box-shadow: inset 0px 0px 20px #444;
       }
