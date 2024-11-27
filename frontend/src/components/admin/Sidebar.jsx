@@ -122,7 +122,13 @@ const Sidebar = ({ handleChange, currentState }) => {
           {(userData.roleId == 3 ||
             userData?.roleId == 1 ||
             userData.roleId == 2) && (
-            <li className={currentState == "Report" ? "active-page" : ""}>
+            <li
+              className={
+                currentState == "Report" || currentState === "Reports"
+                  ? "active-page"
+                  : ""
+              }
+            >
               <Link
                 to={"/admin/reports"}
                 onClick={() => {
