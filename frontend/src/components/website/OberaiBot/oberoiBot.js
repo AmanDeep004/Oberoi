@@ -485,7 +485,7 @@ function sendMessageq(value) {
       body: raw,
     };
 
-    fetch("https://recommendations.vosmos.events:5000/chatBot/", requestOptions)
+    fetch("https://oberoihotels-botapi.vosmos.live/chatBot/", requestOptions)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
