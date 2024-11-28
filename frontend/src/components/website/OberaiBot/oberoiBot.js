@@ -378,6 +378,7 @@ window.onload = async function () {
 
   try {
     // Fetch location based on IP address
+    // const response = await fetch("https://ipapi.co/json/");
     const response = await fetch("https://ipapi.co/json/");
     if (!response.ok) throw new Error("Failed to fetch IP location data.");
 
@@ -462,8 +463,8 @@ function sendMessageq(value) {
     myElement.scrollTop = myElement.scrollHeight;
     let userIDCl = localStorage.getItem("userId");
     let tokenCL = localStorage.getItem("tokenCL");
-    let cityCl = localStorage.getItem("city");
-    let countryCl = localStorage.getItem("country");
+    let cityCl = localStorage.getItem("city") || "";
+    let countryCl = localStorage.getItem("country") || "";
 
     if (!tokenCL) {
       tokenCL = ""; // Set token to empty initially
@@ -472,8 +473,8 @@ function sendMessageq(value) {
     const raw = JSON.stringify({
       userId: userIDCl,
       text: data,
-      city: cityCl,
-      country: countryCl
+      city: cityCl || "",
+      country: countryCl || ""
       //   token: tokenCL,
     });
 
