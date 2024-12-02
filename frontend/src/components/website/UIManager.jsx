@@ -375,6 +375,24 @@ const UIManager = ({ hotelData, iframeRef }) => {
                 </div>
               )}
 
+              {/* room booking*/}
+              {roomData?.bookingLink?.enable && roomData?.bookingLink?.link && (
+                <div id="bottomMsgMenu" className="mt-1 position-relative">
+                  <button
+                    className="btn rOiconBtn rounded-circle position-relative opnMsgJq"
+                    onClick={() => {
+                      window.open(roomData?.bookingLink?.link, "_blank");
+                    }}
+                  >
+                    <span className="icon menu">
+                      {/* <img src="/assets/img/icons/image-icn.png" alt="" /> */}
+                      <img src="/assets/img/icons/booking.svg" alt="" />
+                    </span>
+                    <span className="tooltipUI fs-12">Room Booking</span>
+                  </button>
+                </div>
+              )}
+
               {/* Venue Visualizer Button */}
               {roomData?.virtualSittingArrangement.enable && (
                 <div id="bottomMsgMenu" className="mt-1 position-relative">

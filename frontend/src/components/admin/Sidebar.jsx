@@ -143,7 +143,7 @@ const Sidebar = ({ handleChange, currentState }) => {
             </li>
           )}
 
-          <li className={currentState == "Reportcdscds" ? "active-parent" : ""}>
+          <li className={currentState == "Reports" ? "active-parent" : ""}>
             <Link></Link>
           </li>
         </ul>
