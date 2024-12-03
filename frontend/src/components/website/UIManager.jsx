@@ -14,6 +14,7 @@ import VenueVisualizer from "./VenueVisualizer";
 import { useSaveInteractionMutation } from "../../app/api/website/interactionSlice";
 import BanquetModal from "./BanquetModal";
 import Toast from "../../helpers/Toast";
+import BookaMeeting from "./BookaMeeting";
 const UIManager = ({ hotelData, iframeRef }) => {
   const [state, setState] = useState();
   const [getUserInfo] = useGetUserInfoMutation();
@@ -381,6 +382,7 @@ const UIManager = ({ hotelData, iframeRef }) => {
                   <button
                     className="btn rOiconBtn rounded-circle position-relative opnMsgJq"
                     onClick={() => {
+                      saveUserInteraction("Room Booking");
                       window.open(roomData?.bookingLink?.link, "_blank");
                     }}
                   >
@@ -389,6 +391,24 @@ const UIManager = ({ hotelData, iframeRef }) => {
                       <img src="/assets/img/icons/booking.svg" alt="" />
                     </span>
                     <span className="tooltipUI fs-12">Room Booking</span>
+                  </button>
+                </div>
+              )}
+
+              {/* book a meeting */}
+              {roomData?.bookAMeeting && (
+                <div id="bottomMsgMenu" className="mt-1 position-relative">
+                  <button
+                    className="btn rOiconBtn rounded-circle position-relative opnMsgJq"
+                    onClick={() => {
+                      changeStatus("bookaMeeting");
+                    }}
+                  >
+                    <span className="icon menu">
+                      {/* <img src="/assets/img/icons/image-icn.png" alt="" /> */}
+                      <img src="/assets/img/icons/booking.svg" alt="" />
+                    </span>
+                    <span className="tooltipUI fs-12">Book a meeting</span>
                   </button>
                 </div>
               )}
@@ -755,6 +775,18 @@ const UIManager = ({ hotelData, iframeRef }) => {
             //     .getElementById("iFrame")
             //     .contentWindow.setMediaByName(room.roomName);
             // }}
+          />
+        )}
+
+        {state == "bookaMeeting" && (
+          <BookaMeeting
+            hotelData={hotelData}
+            onSuccess={() => {
+              setState("none");
+            }}
+            onClose={() => {
+              setState("none");
+            }}
           />
         )}
       </>

@@ -53,6 +53,7 @@ router.get("/enterItem/:categoryId/:hotelId", Authenticator.AuthUser, UserContro
 
 /**to capture user's requirement */
 router.post("/saveUserRequirements/:hotelId", Authenticator.AuthUser, UserController.saveUserRequiremnetNew);
+router.post("/createMeetingRequest/:hotelId", Authenticator.AuthUser, UserController.createMeetingRequest);
 // router.post("/smtp", UserController.smtpHandler);
 
 /**to capture all interactions */

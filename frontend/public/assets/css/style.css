@@ -3104,4 +3104,19 @@ span.tooltipUI:after {
     }
 }
 
-/*# sourceMappingURL=style.css.map */
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-range,
+.react-datepicker__time-list-item--selected {
+    background-color: #d3b74f !important;
+    color: white !important;
+}
+
+.react-datepicker__header {
+    background-color: #d3b74f !important;
+}
+
+.custom-datepicker {
+    z-index: 1050;
+    /* Ensures it displays over the modal */
+}

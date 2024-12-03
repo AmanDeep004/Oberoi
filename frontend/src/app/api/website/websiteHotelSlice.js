@@ -14,12 +14,22 @@ export const websiteSlice = userApiSlice.injectEndpoints({
                 method: "POST",
                 body: data,
             }),
+        }),
+        createMeetingRequest: builder.mutation({
+            query: (data) => ({
+                url: `/user/createMeetingRequest/${data?.hotelId}`,
+                method: "POST",
+                body: data,
+            }),
         })
+
+
     })
 })
 
 export const {
     useGetAllHotelQuery,
     useGetHotelInfoByIdQuery,
-    useSaveUserRequirementMutation
+    useSaveUserRequirementMutation,
+    useCreateMeetingRequestMutation,
 } = userApiSlice

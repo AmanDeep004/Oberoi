@@ -10,6 +10,7 @@ const EntertainmentCategory = require("../models/entertainmentCategory");
 const EntertainmentItem = require("../models/entertainmentItem");
 const UserRequirementNew = require("../models/userRequirementsNew");
 const EmailsTemplates = require("../models/emailtemplate");
+const MeetingRequest = require("../models/meetingRequest");
 const sendMail = require('../helpers/mail');
 const mongoose = require('mongoose');
 
@@ -687,6 +688,118 @@ const saveUserRequiremnetNew = async (req, res) => {
     }
 };
 
+const createMeetingRequest = async (req, res) => {
+    try {
+        logging.info(NAMESPACE, "Meeting Request", "createMeetingRequest");
+
+        // Extract the meeting request details from the request body
+        const { startDateTime, endDateTime, purpose } = req.body;
+        console.log(req.body, "amandedeep")
+
+        // Validate the required fields
+        if (!startDateTime || !endDateTime || !purpose) {
+            throw new Error("Start date, end date, and purpose are required fields.");
+        }
+
+        // Ensure endDateTime is after startDateTime
+        if (new Date(endDateTime) <= new Date(startDateTime)) {
+            throw new Error("End date and time must be after start date and time.");
+        }
+
+        // Get user and hotel info
+        const userInfo = req.UserInfo;
+        const hotel = await Hotels.findById(req.params.hotelId);
+
+        if (!hotel) {
+            throw new Error("Hotel not found.");
+        }
+
+        // Save meeting details in the database
+        const meetingData = new MeetingRequest({
+            hotelId: req.params.hotelId,
+            startDateTime,
+            userId: userInfo?.id,
+            endDateTime,
+            purpose,
+        });
+        const savedMeeting = await meetingData.save();
+        console.log(userInfo, "userInfo");
+        console.log(meetingData, "meetingData")
+        // console.log(hotel, "hotel")
+
+        // Email templates
+        const generateUserEmailContent = () => `
+            <html>
+                <body>
+                    <p>Dear ${userInfo.name},</p>
+                    <p>Thank you for scheduling a meeting with ${hotel.hotelName}. We’re excited to assist you with your event planning needs. Below are the details of your request:</p>
+                    <h3>Meeting Details:</h3>
+                    <ul>
+                        <li>Start Date and Time: ${new Date(startDateTime).toLocaleString()}</li>
+                        <li>End Date and Time: ${new Date(endDateTime).toLocaleString()}</li>
+                        <li>Purpose: ${purpose}</li>
+                    </ul>
+                    <p>Our team will reach out to confirm your meeting shortly. If you need to make any changes or provide additional details, please don’t hesitate to contact us at <a href="mailto:${hotel.contactInfo?.banquet?.email || hotel.reservationEmail || hotel.contactInfo?.room?.email}">${hotel.contactInfo?.banquet?.email || hotel.reservationEmail || hotel.contactInfo?.room?.email}</a>.</p>
+                    <p>We look forward to connecting with you and helping you bring your vision to life.</p>
+                    <p>Best regards,<br>${hotel.hotelName}</p>
+                </body>
+            </html>
+        `;
+
+        const generateHotelEmailContent = () => `
+            <html>
+                <body>
+                    <p>Dear ${hotel.hotelName} Team,</p>
+                    <p>A new meeting request has been submitted through the Vosmos platform. Please review the details below:</p>
+                    <h3>Request Details:</h3>
+                    <ul>
+                        <li>Requested By: ${userInfo.name}</li>
+                        <li>Email Address: ${userInfo.email}</li>
+                        <li>Phone Number: ${userInfo.mobile || 'n/a'}</li>
+                        <li>Start Date and Time: ${new Date(startDateTime).toLocaleString()}</li>
+                        <li>End Date and Time: ${new Date(endDateTime).toLocaleString()}</li>
+                        <li>Purpose: ${purpose}</li>
+                    </ul>
+                    <p>Kindly confirm the meeting with the user at your earliest convenience.</p>
+                    <p>Best regards,<br>Vosmos Platform</p>
+                </body>
+            </html>
+        `;
+
+        // Define email options
+        const userEmailOptions = {
+            to: userInfo.email,
+            subject: `Meeting Request Confirmation: ${purpose}`,
+            html: generateUserEmailContent(),
+        };
+
+        const hotelEmailOptions = {
+            to: hotel.contactInfo?.banquet?.email,
+            subject: `New Meeting Request: ${userInfo.name}`,
+            html: generateHotelEmailContent(),
+        };
+
+        // Send emails
+        await sendMail(userEmailOptions, hotel._id.toString());
+        await sendMail(hotelEmailOptions, hotel._id.toString());
+
+        // Save email templates for record-keeping
+        await saveEmailTemplate(userEmailOptions);
+        await saveEmailTemplate(hotelEmailOptions);
+
+        // Respond with success
+        const response = new iResponse(HTTPCodes.SUCCESS, savedMeeting);
+        response.msg = "Meeting request created successfully.";
+        return res.status(HTTPCodes.SUCCESS.status).json(response);
+    } catch (error) {
+        // Log and handle errors
+        logging.error(NAMESPACE, "Meeting Request", "createMeetingRequest Exception", error);
+        const response = new iResponse(HTTPCodes.BADREQUEST, {});
+        response.msg = error.message;
+        return res.status(HTTPCodes.BADREQUEST.status).json(response);
+    }
+};
+
 
 module.exports = {
     GetAllHotels, GetHotelById, GetHotelDetailsbyName, GetAllHalls,
@@ -697,5 +810,5 @@ module.exports = {
     getDecorItemByHotelId, getDecorItemById, getDecorItemByCategory,
     getAllEntertainmentCategory, getEntertainmentCategoryById,
     getEntertainmentItemByHotelId, getEntertainmentItemById, getEntertainmentItemByCategory,
-    saveUserRequiremnetNew,
+    saveUserRequiremnetNew, createMeetingRequest
 }
