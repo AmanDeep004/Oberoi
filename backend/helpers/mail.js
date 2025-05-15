@@ -73,9 +73,8 @@ const sendMail = async (mailOptions, hotelId) => {
     const getAuthCredentials = (hotelId) => {
         if (hotelId) {
             switch (hotelId) {
-                case '6740045ed9c3c01f3624205e': // New Delhi
+                case '6740045ed9c3c01f3624205e':
                     mailOptions.from = `"Vosmos" <${process.env.SMTP_EMAIL_ID}>`;
-                    console.log('New Delhi credentials used');
                     return {
                         user: process.env.SMTP_USER_NEWDELHI,
                         pass: process.env.SMTP_PASS_NEWDELHI,
@@ -84,10 +83,9 @@ const sendMail = async (mailOptions, hotelId) => {
                 // Default case for other hotels like Bangalore
                 default:
                     mailOptions.from = `"Vosmos" <${process.env.SMTP_EMAIL_ID}>`;
-                    console.log('Default credentials (Bangalore or others) used');
                     return {
-                        user: process.env.SMTP_USER_BANGALORE || process.env.SMTP_USER_NEWDELHI,
-                        pass: process.env.SMTP_PASS_BANGALORE || process.env.SMTP_PASS_NEWDELHI,
+                        user: process.env.SMTP_USER_NEWDELHI,
+                        pass: process.env.SMTP_PASS_NEWDELHI,
                     };
             }
         } else {

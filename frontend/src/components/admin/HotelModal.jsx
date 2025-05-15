@@ -401,7 +401,7 @@ const HotelModal = ({ onClose, initValues, edit = false }) => {
                       <div className="col-md-6">
                         <div className="form-group mb-3 position-relative">
                           <Field
-                            type="email"
+                            type="text"
                             className="form-control input_stye1 p-15 px-15"
                             placeholder="Email"
                             name="contactInfo.banquet.email"
