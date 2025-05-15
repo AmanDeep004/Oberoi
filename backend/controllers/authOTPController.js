@@ -207,9 +207,54 @@ const generateGuestUser = async (req, res) => {
     logging.error(NAMESPACE, "Generate GuestUser", "Generate GuestUser exception", ex);
   }
 };
+
+const createGuestUser = async (req, res) => {
+  try {
+    logging.info(NAMESPACE, "Guest User", "Guest User");
+    const { hotelId, utmFields } = req.body;
+    if (!hotelId) {
+      var rs = new iResponse(HTTPCodes.BADREQUEST, {});
+      rs.msg = "Hotel Id is required";
+      return res.status(HTTPCodes.BADREQUEST.status).json(rs);
+    }
+    const user = {
+      name: 'Guest User',
+      hotelId: hotelId,
+      roleId: EnumUserRoles.User,
+      utmFields: utmFields
+    };
+    const result = await bookingUser.create(user);
+
+
+    const accessToken = jwt.sign(
+      {
+        UserInfo: {
+          // email: user.email,
+          // name: user.name,
+          id: result._id,
+          // mobile: user.phone,
+        },
+      },
+      process.env.SECRET_TOKEN
+      // "secretToken"
+    );
+    var rs = new iResponse(HTTPCodes.SUCCESS, {
+      // verifiied: true,
+      accessToken: accessToken,
+    });
+    rs.msg = "success";
+    return res.status(HTTPCodes.SUCCESS.status).json(rs);
+  }
+
+  catch (error) {
+    logging.error(NAMESPACE, "Guest User", "Guest User exception", error);
+  }
+};
+
 module.exports = {
   generateOTP,
   verifyOTP,
   generateGuestUser,
   getUserData,
+  createGuestUser,
 };

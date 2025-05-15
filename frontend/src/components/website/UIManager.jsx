@@ -276,7 +276,7 @@ const UIManager = ({ hotelData, iframeRef }) => {
         });
         setState("inquiry");
       } else {
-        setState("kyc");
+        setState("inquiry");
         setUser({
           name: "",
           email: "",
@@ -297,7 +297,7 @@ const UIManager = ({ hotelData, iframeRef }) => {
       }
     } catch (e) {
       console.log("exception", e);
-      setState("kyc");
+      setState("inquiry");
       setUser({
         name: "",
         email: "",
@@ -598,6 +598,7 @@ const UIManager = ({ hotelData, iframeRef }) => {
               saveUserInteraction(value, action)
             }
             inqueryRedirect={inqueryRedirect}
+            hotelId={hotelData._id}
           />
         )}
 

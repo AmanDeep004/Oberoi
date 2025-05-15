@@ -24,12 +24,19 @@ export const authSlice = apiSlice.injectEndpoints({
         method: "GET",
       }),
     }),
-    getLoggedInUserInfo:builder.mutation({
+    getLoggedInUserInfo: builder.mutation({
       query: () => ({
         url: "/administrator/getUserData",
         method: "GET",
       }),
-    })
+    }),
+    createGuestUser: builder.mutation({
+      query: (data) => ({
+        url: "/authOTP/createGuestUser",
+        method: "POST",
+        body: data,
+      }),
+    }),
   }),
 });
 
@@ -37,5 +44,6 @@ export const {
   useGenerateOTPMutation,
   useVerifyOTPMutation,
   useGetUserInfoMutation,
-  useGetLoggedInUserInfoMutation
+  useGetLoggedInUserInfoMutation,
+  useCreateGuestUserMutation,
 } = authSlice;

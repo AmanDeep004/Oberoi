@@ -2719,6 +2719,8 @@ span.tooltipUI:after {
 
     .kyc-wrapper {
         padding: 20px 15px !important;
+            overflow-y: auto;
+            max-height: 100vh;
     }
 
     .alert.alert-warning.error-ui.px-80.py-10.rounded-0.mb-0 {

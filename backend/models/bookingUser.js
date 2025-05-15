@@ -3,19 +3,19 @@ const BookingUserSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
+      // required: true,
     },
     email: {
       type: String,
-      required: true,
+      // required: true,
     },
     phone: {
       type: String,
-      required: true,
+      // required: true,
     },
     OTP: {
       type: String,
-      required: true,
+      // required: true,
     },
     hotelId: {
       // type: String,
@@ -32,6 +32,10 @@ const BookingUserSchema = new mongoose.Schema(
     },
     utmFields: {
       type: Object
+    },
+    userType: {
+      type: String,
+      default: "Guest User"
     }
   },
   {
